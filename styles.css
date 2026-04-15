@@ -1,3 +1,4 @@
+/* Theme tokens for the shared cybersecurity visual language. */
 :root {
     --bg-deep: #041018;
     --bg-mid: #0a1b26;
@@ -13,6 +14,7 @@
     --shadow: rgba(0, 0, 0, 0.42);
 }
 
+/* Global reset and page foundation. */
 * {
     margin: 0;
     padding: 0;
@@ -60,6 +62,7 @@ body::before {
     }
 }
 
+/* Shared header and navigation styles. */
 a {
     text-decoration: none;
 }
@@ -115,6 +118,7 @@ a #main-header:hover {
     text-shadow: 0 0 10px rgba(82, 227, 255, 0.55);
 }
 
+/* Homepage featured work carousel. */
 .carousel {
     position: relative;
     width: 100%;
@@ -180,6 +184,7 @@ a #main-header:hover {
     opacity: 0.8;
 }
 
+/* Shared footer and top-right social link. */
 #footer {
     background-color: var(--bg-panel);
     color: var(--text-soft);
@@ -219,6 +224,7 @@ a #main-header:hover {
     filter: drop-shadow(0 0 12px rgba(82, 227, 255, 0.22));
 }
 
+/* Projects gallery and hover treatment. */
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -293,6 +299,7 @@ a #main-header:hover {
     transform: translateX(80px);
 }
 
+/* Shared text treatment for interior content pages. */
 main,
 section {
     color: var(--text-main);
@@ -322,6 +329,7 @@ section p {
     font-size: 1.05rem;
 }
 
+/* Mobile adjustments for stacked project cards. */
 @media (max-width: 768px) {
     .projects {
         display: flex;

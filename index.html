@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anta&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- This is the main header of the page -->
+        <div id="header-container">
+            <a href="index.html">
+                <h1 id="main-header">Brandon Cartagena</h1>
+            </a>
+            <div id="linkedin-box">
+                <a href="https://www.linkedin.com/in/brancartagena" target="_blank">
+                    <img src="images/linkedin-logo.png" alt="LinkedIn" id="linkedin-logo" />
+                </a>
+            </div>
+        </div>
+
+        <!-- The navigation bar -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main content area -->
+        <main>
+            <div class="w-full text-center">
+                 <img id="brandon-image" style="border-radius:30%; object-fit:cover; object-position:bottom; height:350px; width:350px; overflow:hidden; display:block; margin:100px auto;"
+                    onclick="iterateClickCount()" src="../images/brandon.png" alt="Photo of Brandon Cartagena" class="cursor-pointer xl:mt-10 inline-block animate__animated animate__fadeIn 
+                 delay2 border-gray-900 duration-300 ease hover:border-green-400 shadow-md border-8 h-100 w-100 md:w-96 md:h-96 inline-block">
+                 <div style="text-align:center; font-size:50px; margin-bottom:100px;">
+                     <span>
+                        Hey! I'm Brandon,
+                     </span>
+                     <span style="color:#fdfdfd; font-weight:bold;"> a passionate developer</span> <span style="color:#ffffff;">who love to share my works</span> with the world.
+                 </div>
+            </div>
+        </main>
+        
+        <div class="carousel-container">
+            <h2 id="featured-projects-title">Featured Work</h2>
+            <div class="carousel">
+
+                <div class="card active" data-index="0">
+                    <img src="../images/gamerate.png">
+                    <h3>Project 1</h3>
+                </div>
+
+                <div class="card right" data-index="1">
+                    <img src="../images/tickyaza.png">
+                    <h3>Project 2</h3>
+                </div>
+
+                <div class="card left" data-index="2">
+                    <img src="../images/umd_creatives_short.png">
+                    <h3>Project 3</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>&copy; 2026 Brandon Cartagena. All rights reserved.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

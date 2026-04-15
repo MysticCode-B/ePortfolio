@@ -1,7 +1,9 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+/* Defining CSS Variables */
 :root {
     --bg-deep: #041018;
     --bg-mid: #0a1b26;
@@ -21,16 +23,19 @@
     --max-width: 1160px;
 }
 
+/* Resetting default margins and paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Setting global styles */
 html {
     scroll-behavior: smooth;
 }
 
+/* Styling the body */
 body {
     display: flex;
     flex-direction: column;
@@ -46,6 +51,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Styling pseudo-element for the body */
 body::before {
     content: '';
     position: fixed;
@@ -59,6 +65,7 @@ body::before {
     z-index: -1;
 }
 
+/* Keyframes for gradient animation */
 @keyframes gradientAnimation {
     0% {
         filter: saturate(1) brightness(1);
@@ -71,21 +78,25 @@ body::before {
     }
 }
 
+/* Styling links */
 a {
     color: inherit;
     text-decoration: none;
 }
 
+/* Styling images */
 img {
     max-width: 100%;
     display: block;
 }
 
+/* Styling the main container */
 main {
     width: 100%;
     flex: 1;
 }
 
+/* Styling the header container */
 #header-container {
     display: flex;
     align-items: center;
@@ -97,6 +108,7 @@ main {
     padding: 22px 20px 10px;
 }
 
+/* Styling the main header */
 #main-header {
     color: var(--text-main);
     text-align: center;
@@ -107,6 +119,7 @@ main {
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Styling the main header on hover */
 a #main-header:hover {
     transform: scale(1.04);
     text-shadow:
@@ -114,17 +127,20 @@ a #main-header:hover {
         0 0 24px rgba(42, 245, 194, 0.42);
 }
 
+/* Styling the LinkedIn box */
 #linkedin-box {
     position: absolute;
     right: 20px;
 }
 
+/* Styling the LinkedIn logo */
 #linkedin-logo {
     height: 40px;
     object-fit: contain;
     filter: drop-shadow(0 0 12px rgba(82, 227, 255, 0.22));
 }
 
+/* Styling the navbar */
 #navbar {
     background-color: var(--bg-panel);
     backdrop-filter: blur(10px);
@@ -136,6 +152,7 @@ a #main-header:hover {
     box-shadow: 0 0 0 1px rgba(42, 245, 194, 0.05), 0 18px 40px var(--shadow);
 }
 
+/* Styling the navbar ul */
 #navbar ul {
     display: flex;
     justify-content: center;
@@ -143,6 +160,7 @@ a #main-header:hover {
     list-style: none;
 }
 
+/* Styling the navbar a */
 #navbar a {
     color: var(--text-main);
     font-family: 'JetBrains Mono', monospace;
@@ -155,6 +173,7 @@ a #main-header:hover {
         opacity 0.25s ease;
 }
 
+/* Styling the navbar a:hover */
 #navbar a:hover,
 #navbar a:focus-visible {
     color: var(--accent-cyan);
@@ -162,18 +181,21 @@ a #main-header:hover {
     outline: none;
 }
 
+/* Styling the section shell */
 .section-shell,
 .page-shell {
     width: min(var(--max-width), calc(100% - 32px));
     margin: 0 auto 32px;
 }
 
+/* Styling the section heading */
 .section-heading {
     text-align: center;
     max-width: 760px;
     margin: 0 auto 34px;
 }
 
+/* Styling the eyebrow */
 .eyebrow {
     color: var(--accent-green);
     font-family: 'JetBrains Mono', monospace;
@@ -183,6 +205,7 @@ a #main-header:hover {
     margin-bottom: 14px;
 }
 
+/* Styling the section heading h2 */
 .section-heading h2,
 .page-hero h2,
 .hero-title {
@@ -192,6 +215,7 @@ a #main-header:hover {
     margin-bottom: 16px;
 }
 
+/* Styling the section lead */
 .section-lead,
 .page-hero p,
 .hero-description,
@@ -205,12 +229,14 @@ a #main-header:hover {
     line-height: 1.7;
 }
 
+/* Styling the hero */
 .hero {
     width: min(var(--max-width), calc(100% - 32px));
     margin: 0 auto 32px;
     padding: 54px 0 38px;
 }
 
+/* Styling the hero grid */
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.9fr);
@@ -218,19 +244,23 @@ a #main-header:hover {
     align-items: center;
 }
 
+/* Styling the hero copy left */
 .hero-copy-left {
     text-align: left;
 }
 
+/* Styling the hero title */
 .hero-title {
     max-width: 12ch;
 }
 
+/* Styling the hero description wide */
 .hero-description-wide {
     max-width: 62ch;
     font-size: 1.08rem;
 }
 
+/* Styling the hero actions */
 .hero-actions {
     display: flex;
     gap: 16px;
@@ -238,6 +268,7 @@ a #main-header:hover {
     flex-wrap: wrap;
 }
 
+/* Styling the button primary */
 .button-primary,
 .button-secondary {
     display: inline-flex;
@@ -257,17 +288,20 @@ a #main-header:hover {
         background-color 0.25s ease;
 }
 
+/* Styling the button primary */
 .button-primary {
     color: #03131a;
     background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
     box-shadow: 0 16px 30px rgba(42, 245, 194, 0.2);
 }
 
+/* Styling the button secondary */
 .button-secondary {
     border: 1px solid var(--line);
     background: var(--bg-panel-soft);
 }
 
+/* Styling the button primary:hover */
 .button-primary:hover,
 .button-primary:focus-visible,
 .button-secondary:hover,
@@ -276,12 +310,14 @@ a #main-header:hover {
     outline: none;
 }
 
+/* Styling the button secondary:hover */
 .button-secondary:hover,
 .button-secondary:focus-visible {
     border-color: var(--line-strong);
     box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
 }
 
+/* Styling the hero stats */
 .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -289,6 +325,7 @@ a #main-header:hover {
     margin-top: 18px;
 }
 
+/* Styling the stat card */
 .stat-card,
 .info-card,
 .contact-card,
@@ -304,11 +341,13 @@ a #main-header:hover {
         0 18px 36px rgba(0, 0, 0, 0.26);
 }
 
+/* Styling the stat card */
 .stat-card {
     padding: 18px;
     border-radius: 20px;
 }
 
+/* Styling the stat value */
 .stat-value {
     color: var(--text-main);
     font-weight: 700;
@@ -316,12 +355,14 @@ a #main-header:hover {
     margin-bottom: 6px;
 }
 
+/* Styling the stat label */
 .stat-label {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
+/* Styling the hero visual */
 .hero-visual {
     position: relative;
     display: grid;
@@ -329,6 +370,7 @@ a #main-header:hover {
     justify-items: center;
 }
 
+/* Styling the hero image */
 .hero-image {
     width: min(380px, 80vw);
     aspect-ratio: 1 / 1;
@@ -341,12 +383,14 @@ a #main-header:hover {
         0 0 32px rgba(82, 227, 255, 0.12);
 }
 
+/* Styling the hero visual card */
 .hero-visual-card {
     width: min(360px, 100%);
     padding: 18px 20px;
     border-radius: 20px;
 }
 
+/* Styling the hero visual label */
 .hero-visual-label,
 .card-kicker,
 .timeline-label,
@@ -360,10 +404,12 @@ a #main-header:hover {
     margin-bottom: 10px;
 }
 
+/* Styling the featured shell */
 .featured-shell {
     padding-bottom: 28px;
 }
 
+/* Styling the carousel container */
 .carousel-container {
     padding: 24px 20px 8px;
     border: 1px solid var(--line);
@@ -374,12 +420,14 @@ a #main-header:hover {
         0 18px 36px rgba(0, 0, 0, 0.3);
 }
 
+/* Styling the carousel */
 .carousel {
     position: relative;
     width: 100%;
     height: 500px;
 }
 
+/* Styling the card */
 .card {
     position: absolute;
     top: 12px;
@@ -399,12 +447,14 @@ a #main-header:hover {
     background: rgba(3, 12, 18, 0.75);
 }
 
+/* Styling the card image */
 .card img {
     width: 100%;
     height: 58%;
     object-fit: cover;
 }
 
+/* Styling the card copy */
 .card-copy {
     display: flex;
     flex-direction: column;
@@ -416,15 +466,18 @@ a #main-header:hover {
         radial-gradient(circle at top left, rgba(82, 227, 255, 0.14), transparent 60%);
 }
 
+/* Styling the card copy h3 */
 .card-copy h3 {
     font-size: 1.8rem;
 }
 
+/* Styling the card copy p */
 .card-copy p {
     color: var(--text-soft);
     line-height: 1.55;
 }
 
+/* Styling the card tags */
 .card-tags {
     display: flex;
     gap: 10px;
@@ -432,6 +485,7 @@ a #main-header:hover {
     margin-top: auto;
 }
 
+/* Styling the card tags span */
 .card-tags span {
     padding: 8px 10px;
     border: 1px solid rgba(82, 227, 255, 0.18);
@@ -443,6 +497,7 @@ a #main-header:hover {
     letter-spacing: 0.05em;
 }
 
+/* Styling the active card */
 .card.active {
     left: 50%;
     transform: translateX(-50%) scale(1.02);
@@ -450,6 +505,7 @@ a #main-header:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(82, 227, 255, 0.16);
 }
 
+/* Styling the right card */
 .card.right {
     left: 76%;
     transform: translateX(-50%) scale(0.9);
@@ -457,6 +513,7 @@ a #main-header:hover {
     opacity: 0.8;
 }
 
+/* Styling the left card */
 .card.left {
     left: 24%;
     transform: translateX(-50%) scale(0.9);
@@ -464,6 +521,7 @@ a #main-header:hover {
     opacity: 0.8;
 }
 
+/* Styling the page hero */
 .page-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
@@ -474,22 +532,26 @@ a #main-header:hover {
     margin-bottom: 26px;
 }
 
+/* Styling the page hero panel */
 .page-hero-panel {
     display: grid;
     gap: 14px;
 }
 
+/* Styling the page hero list */
 .page-hero-list {
     display: grid;
     gap: 12px;
     align-self: stretch;
 }
 
+/* Styling the info card */
 .info-card {
     padding: 20px;
     border-radius: 20px;
 }
 
+/* Styling the info card h3 */
 .info-card h3,
 .contact-card h3,
 .skill-card h3,
@@ -498,6 +560,7 @@ a #main-header:hover {
     margin-bottom: 8px;
 }
 
+/* Styling the skills grid */
 .skills-grid,
 .contact-grid {
     display: grid;
@@ -506,12 +569,14 @@ a #main-header:hover {
     margin-bottom: 24px;
 }
 
+/* Styling the skill card */
 .skill-card,
 .contact-card {
     padding: 22px;
     border-radius: 22px;
 }
 
+/* Styling the skills note */
 .skills-note {
     text-align: center;
     max-width: 700px;
@@ -519,11 +584,13 @@ a #main-header:hover {
     color: var(--text-muted);
 }
 
+/* Styling the timeline */
 .timeline {
     display: grid;
     gap: 16px;
 }
 
+/* Styling the timeline item */
 .timeline-item {
     display: grid;
     grid-template-columns: 180px minmax(0, 1fr);
@@ -532,20 +599,24 @@ a #main-header:hover {
     border-radius: 22px;
 }
 
+/* Styling the timeline label */
 .timeline-label {
     margin: 0;
 }
 
+/* Styling the contact intro */
 .contact-intro {
     padding: 28px;
     border-radius: 26px;
     margin-bottom: 24px;
 }
 
+/* Styling the contact grid */
 .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Styling the contact link */
 .contact-link {
     display: inline-block;
     margin-top: 14px;
@@ -555,6 +626,7 @@ a #main-header:hover {
     letter-spacing: 0.04em;
 }
 
+/* Styling the contact actions */
 .contact-actions {
     display: flex;
     gap: 16px;
@@ -562,12 +634,14 @@ a #main-header:hover {
     flex-wrap: wrap;
 }
 
+/* Styling the availability */
 .availability {
     color: var(--text-muted);
     font-size: 0.96rem;
     margin-top: 16px;
 }
 
+/* Styling the projects */
 .projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -576,6 +650,7 @@ a #main-header:hover {
     margin: 10px auto 32px;
 }
 
+/* Styling the project card */
 .project-card {
     position: relative;
     border-radius: 20px;
@@ -586,12 +661,14 @@ a #main-header:hover {
     min-height: 420px;
 }
 
+/* Styling the project card image */
 .project-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Styling the project overlay */
 .project-overlay {
     position: absolute;
     inset: 0;
@@ -606,6 +683,7 @@ a #main-header:hover {
     transition: opacity 0.3s ease;
 }
 
+/* Styling the project overlay h3 */
 .project-overlay h3 {
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -613,16 +691,19 @@ a #main-header:hover {
     text-shadow: 0 0 16px rgba(82, 227, 255, 0.55);
 }
 
+/* Styling the project card:hover */
 .project-card:hover {
     transform: translateY(-8px);
     border-color: rgba(42, 245, 194, 0.34);
     box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35), 0 0 30px rgba(42, 245, 194, 0.12);
 }
 
+/* Styling the project overlay:hover */
 .project-card:hover .project-overlay {
     opacity: 1;
 }
 
+/* Styling the footer */
 #footer {
     background-color: var(--bg-panel);
     color: var(--text-soft);

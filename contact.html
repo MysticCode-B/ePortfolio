@@ -1,46 +1,114 @@
-<html>
-  <head>
-    <title>Portfolio</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+            rel="stylesheet" />
+    </head>
 
-  <body>
-    <!-- This is the main header of the page -->
-    <div id="header-container">
-      <a href="index.html">
-        <h1 id="main-header">Brandon Cartagena</h1>
-      </a>
-      <div id="linkedin-box">
-        <a href="https://www.linkedin.com/in/brancartagena" target="_blank">
-          <img
-            src="images/linkedin-logo.png"
-            alt="LinkedIn"
-            id="linkedin-logo"
-          />
-        </a>
-      </div>
-    </div>
+    <body>
+        <div id="header-container">
+            <a href="index.html">
+                <h1 id="main-header">Brandon Cartagena</h1>
+            </a>
+            <div id="linkedin-box">
+                <a href="https://www.linkedin.com/in/brancartagena" target="_blank" rel="noreferrer">
+                    <img src="images/linkedin-logo.png" alt="LinkedIn" id="linkedin-logo" />
+                </a>
+            </div>
+        </div>
 
-    <!-- The navigation bar -->
-    <nav id="navbar">
-      <ul>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- Site footer -->
-    <footer id="footer">
-      <p>&copy; 2026 Brandon Cartagena. All rights reserved.</p>
-    </footer>
-  </body>
+        <nav id="navbar" aria-label="Primary navigation">
+            <ul>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="page-shell">
+            <section class="contact-intro">
+                <p class="eyebrow">Let&apos;s Connect</p>
+                <h2>Open to conversations about projects, internships, and creative collaboration.</h2>
+                <p>
+                    If you are building something exciting, looking for a developer with a strong UI eye,
+                    or just want to connect, I would love to hear from you. LinkedIn is the best place
+                    to start the conversation.
+                </p>
+                <div class="contact-actions">
+                    <a class="button-primary" href="https://www.linkedin.com/in/brancartagena" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+                    <a class="button-secondary" href="projects.html">View Projects</a>
+                </div>
+                <p class="availability">Currently interested in opportunities where design quality and thoughtful implementation both matter.</p>
+            </section>
+
+            <section class="contact-grid">
+                <article class="contact-card">
+                    <p class="contact-label">Primary</p>
+                    <h3>Best way to reach me</h3>
+                    <p>Reach out on LinkedIn for project discussions, internship opportunities, or collaboration ideas.</p>
+                    <a
+                        class="contact-link"
+                        href="https://www.linkedin.com/in/brancartagena"
+                        target="_blank"
+                        rel="noreferrer">Send a LinkedIn message</a>
+                </article>
+
+                <article class="contact-card">
+                    <p class="contact-label">Professional</p>
+                    <h3>LinkedIn</h3>
+                    <p>See more of my background, connect professionally, and stay in touch for future work.</p>
+                    <a
+                        class="contact-link"
+                        href="https://www.linkedin.com/in/brancartagena"
+                        target="_blank"
+                        rel="noreferrer">linkedin.com/in/brancartagena</a>
+                </article>
+            </section>
+
+            <section class="section-shell">
+                <div class="section-heading">
+                    <p class="eyebrow">Best Fit</p>
+                    <h2>The kinds of opportunities I enjoy most</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <p class="skill-label">Product Work</p>
+                        <h3>UI-focused builds</h3>
+                        <p>
+                            Projects where the interface quality matters just as much as the underlying feature set.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <p class="skill-label">Collaboration</p>
+                        <h3>Team-based development</h3>
+                        <p>
+                            Environments where ideas can be refined through feedback, iteration, and shared ownership.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <p class="skill-label">Growth</p>
+                        <h3>Learning-centered roles</h3>
+                        <p>
+                            Opportunities that push me to keep improving both technically and as a designer-minded developer.
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <p>&copy; 2026 Brandon Cartagena. All rights reserved.</p>
+        </footer>
+    </body>
 </html>

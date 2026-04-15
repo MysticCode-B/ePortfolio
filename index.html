@@ -13,20 +13,18 @@
     </head>
 
     <body>
-        <!-- This is the main header of the page -->
         <div id="header-container">
             <a href="index.html">
                 <h1 id="main-header">Brandon Cartagena</h1>
             </a>
             <div id="linkedin-box">
-                <a href="https://www.linkedin.com/in/brancartagena" target="_blank">
+                <a href="https://www.linkedin.com/in/brancartagena" target="_blank" rel="noreferrer">
                     <img src="images/linkedin-logo.png" alt="LinkedIn" id="linkedin-logo" />
                 </a>
             </div>
         </div>
 
-        <!-- The navigation bar -->
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Primary navigation">
             <ul>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -34,48 +32,116 @@
             </ul>
         </nav>
 
-        <!-- Main content area -->
         <main>
-            <section class="hero">
-                <img
-                    id="brandon-image"
-                    class="hero-image"
-                    src="images/brandon.png"
-                    alt="Photo of Brandon Cartagena" />
-                <div class="hero-copy">
-                    <p class="hero-intro">Hey! I'm Brandon,</p>
-                    <p class="hero-description">
-                        <span class="hero-highlight">a passionate developer</span>
-                        who loves to share my work with the world.
+            <section class="hero hero-grid">
+                <div class="hero-copy hero-copy-left">
+                    <p class="eyebrow">Software Developer</p>
+                    <h2 class="hero-title">Building thoughtful digital experiences with clean, high-impact UI.</h2>
+                    <p class="hero-description hero-description-wide">
+                        I am Brandon Cartagena, a developer focused on polished web interfaces,
+                        collaborative product work, and projects that turn complex ideas into
+                        intuitive experiences people actually enjoy using.
                     </p>
+                    <div class="hero-actions">
+                        <a class="button-primary" href="projects.html">View Projects</a>
+                        <a class="button-secondary" href="contact.html">Contact Me</a>
+                    </div>
+                    <div class="hero-stats" aria-label="Quick highlights">
+                        <article class="stat-card">
+                            <p class="stat-value">3</p>
+                            <p class="stat-label">Featured builds</p>
+                        </article>
+                        <article class="stat-card">
+                            <p class="stat-value">Full stack</p>
+                            <p class="stat-label">Across design and development</p>
+                        </article>
+                        <article class="stat-card">
+                            <p class="stat-value">UI first</p>
+                            <p class="stat-label">Focused on clarity and polish</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <img
+                        id="brandon-image"
+                        class="hero-image"
+                        src="images/apple.png"
+                        alt="Photo of Brandon Cartagena" />
+                    <div class="hero-visual-card">
+                        <p class="hero-visual-label">Current focus</p>
+                        <p class="hero-visual-text">Responsive portfolio experiences, modern front-end polish, and human-centered product thinking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell featured-shell">
+                <div class="section-heading">
+                    <p class="eyebrow">Featured Work</p>
+                    <h2 id="featured-projects-title">Projects with real product thinking behind them</h2>
+                    <p class="section-lead">
+                        A few standout builds that show how I approach interface design,
+                        product storytelling, and implementation detail.
+                    </p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <article class="card active" data-index="0">
+                            <img src="images/gamerate.png" alt="GameRate project preview" />
+                            <div class="card-copy">
+                                <p class="card-kicker">Game Discovery</p>
+                                <h3>GameRate</h3>
+                                <p>
+                                    A rating-first experience for finding, comparing, and reviewing games
+                                    with a clearer information hierarchy.
+                                </p>
+                                <div class="card-tags">
+                                    <span>UX</span>
+                                    <span>Web App</span>
+                                    <span>Product UI</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card right" data-index="1">
+                            <img src="images/tickyaza.png" alt="TickYaza project preview" />
+                            <div class="card-copy">
+                                <p class="card-kicker">Task Experience</p>
+                                <h3>TickYaza</h3>
+                                <p>
+                                    A productivity concept centered on calmer workflows, stronger task visibility,
+                                    and a cleaner day-to-day planning experience.
+                                </p>
+                                <div class="card-tags">
+                                    <span>Planning</span>
+                                    <span>Interface</span>
+                                    <span>Interaction</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card left" data-index="2">
+                            <img src="images/umd_creatives_short.png" alt="UMD Creatives project preview" />
+                            <div class="card-copy">
+                                <p class="card-kicker">Creative Platform</p>
+                                <h3>UMD Creatives</h3>
+                                <p>
+                                    A community-facing concept for showcasing creators, projects,
+                                    and opportunities in a more engaging visual system.
+                                </p>
+                                <div class="card-tags">
+                                    <span>Branding</span>
+                                    <span>Community</span>
+                                    <span>Showcase</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
         </main>
-        
-        <!-- Featured project carousel -->
-        <div class="carousel-container">
-            <h2 id="featured-projects-title">Featured Work</h2>
-            <div class="carousel">
 
-                <div class="card active" data-index="0">
-                    <img src="images/gamerate.png" alt="GameRate project preview">
-                    <h3>Project 1</h3>
-                </div>
-
-                <div class="card right" data-index="1">
-                    <img src="images/tickyaza.png" alt="TickYaza project preview">
-                    <h3>Project 2</h3>
-                </div>
-
-                <div class="card left" data-index="2">
-                    <img src="images/umd_creatives_short.png" alt="UMD Creatives project preview">
-                    <h3>Project 3</h3>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Site footer -->
         <footer id="footer">
             <p>&copy; 2026 Brandon Cartagena. All rights reserved.</p>
         </footer>

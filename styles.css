@@ -29,7 +29,7 @@ body {
     color: var(--text-main);
     font-family: 'Space Grotesk', sans-serif;
     background:
-        radial-gradient(circle at top left, rgba(42, 245, 194, 0.16), transparent 28%),
+        radial-gradient(circle at top left, rgba(148, 209, 244, 0.385), transparent 28%),
         radial-gradient(circle at top right, rgba(76, 141, 255, 0.16), transparent 32%),
         linear-gradient(140deg, var(--bg-deep), #071723 45%, var(--bg-mid));
     background-size: 100% 100%;

@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com');
+:root {
+    --bg-deep: #041018;
+    --bg-mid: #0a1b26;
+    --bg-panel: rgba(8, 24, 36, 0.78);
+    --bg-panel-strong: rgba(5, 18, 29, 0.9);
+    --text-main: #d8f6ff;
+    --text-soft: #8fb9c7;
+    --accent-cyan: #52e3ff;
+    --accent-green: #2af5c2;
+    --accent-blue: #4c8dff;
+    --line: rgba(82, 227, 255, 0.24);
+    --glow: rgba(42, 245, 194, 0.22);
+    --shadow: rgba(0, 0, 0, 0.42);
+}
 
 * {
     margin: 0;
@@ -10,24 +23,40 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(270deg, #aed3fb, #b4b4b4, #dcecee);
-    background-size: 600% 600%; /* For smooth animation */
-    font-family: 'Anta', sans-serif;
     margin: 0;
-    animation: gradientAnimation 50s ease infinite; /* Add animation */
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(42, 245, 194, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(76, 141, 255, 0.16), transparent 32%),
+        linear-gradient(140deg, var(--bg-deep), #071723 45%, var(--bg-mid));
+    background-size: 100% 100%;
+    animation: gradientAnimation 18s ease infinite;
+    overflow-x: hidden;
 }
 
-/* Homepage */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(82, 227, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(82, 227, 255, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1));
+    pointer-events: none;
+    z-index: -1;
+}
 
 @keyframes gradientAnimation {
     0% {
-        background-position: 0% 50%;
+        filter: saturate(1) brightness(1);
     }
     50% {
-        background-position: 100% 50%;
+        filter: saturate(1.08) brightness(1.04);
     }
     100% {
-        background-position: 0% 50%;
+        filter: saturate(1) brightness(1);
     }
 }
 
@@ -36,26 +65,31 @@ a {
 }
 
 #main-header {
-    color: #E3EEFF;
+    color: var(--text-main);
     padding: 10px 0;
     text-align: center;
     font-size: 50px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 0 24px rgba(82, 227, 255, 0.18);
     transition: all 0.3s ease;
 }
 
 a #main-header:hover {
     transform: scale(1.08);
-    text-shadow: 
-        0 0 8px rgba(255,255,255,0.7),
-        0 0 16px rgba(255,255,255,0.5);
+    text-shadow:
+        0 0 10px rgba(82, 227, 255, 0.75),
+        0 0 24px rgba(42, 245, 194, 0.42);
 }
 
 #navbar {
-    background-color: #3F4E4F;
-    opacity: 0.3;
+    background-color: var(--bg-panel);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
     border-radius: 10px;
     padding: 10px 0;
     margin: 10px;
+    box-shadow: 0 0 0 1px rgba(42, 245, 194, 0.05), 0 18px 40px var(--shadow);
 }
 
 #navbar ul {
@@ -68,14 +102,18 @@ a #main-header:hover {
 }
 
 #navbar a {
-    text-decoration: none;
-    color: #E3EEFF;
+    color: var(--text-main);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
-
-/*----------------------------------------------------*
- * 3D Card Carousel Styles
- *----------------------------------------------------*/
+#navbar a:hover {
+    color: var(--accent-cyan);
+    text-shadow: 0 0 10px rgba(82, 227, 255, 0.55);
+}
 
 .carousel {
     position: relative;
@@ -85,23 +123,25 @@ a #main-header:hover {
 }
 
 .carousel-container {
-    width: 90%;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #3F4E4F;
-    background-color: rgba(7, 7, 7, 0.8);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(5, 18, 29, 0.82), rgba(8, 24, 36, 0.92));
+    box-shadow:
+        inset 0 1px 0 rgba(82, 227, 255, 0.06),
+        0 18px 36px rgba(0, 0, 0, 0.3);
 }
 
 #featured-projects-title {
-    color: #E3EEFF;
+    color: var(--text-main);
     text-align: center;
     margin-bottom: 30px;
     font-size: 60px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-/* base card */
 .card {
     position: absolute;
     width: 400px;
@@ -109,26 +149,23 @@ a #main-header:hover {
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
-
+    border: 1px solid rgba(82, 227, 255, 0.15);
     transition: all 0.4s ease;
 }
 
-/* images */
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* FRONT CARD */
 .card.active {
     left: 50%;
     transform: translateX(-50%) scale(1.1);
     z-index: 3;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(82, 227, 255, 0.16);
 }
 
-/* RIGHT CARD */
 .card.right {
     left: 70%;
     transform: translateX(-50%) scale(0.9);
@@ -136,7 +173,6 @@ a #main-header:hover {
     opacity: 0.8;
 }
 
-/* LEFT CARD */
 .card.left {
     left: 30%;
     transform: translateX(-50%) scale(0.9);
@@ -144,49 +180,49 @@ a #main-header:hover {
     opacity: 0.8;
 }
 
-
 #footer {
-    background-color: #3F4E4F;
-    color: #E3EEFF;
-    opacity: 0.3;
+    background-color: var(--bg-panel);
+    color: var(--text-soft);
+    border-top: 1px solid var(--line);
     text-align: center;
     padding: 30px 0;
     position: relative;
     width: 100%;
     height: 100px;
     margin-top: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
 }
 
 #header-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Allow absolute positioning for the LinkedIn box */
-    padding: 0 20px; /* Add some horizontal padding */
+    position: relative;
+    padding: 0 20px;
 }
 
 #linkedin-box {
     position: absolute;
-    right: 20px; /* Position the box on the far right */
-    width: auto; /* Remove fixed width */
-    height: auto; /* Remove fixed height */
-    background-color: transparent; /* Remove background color */
-    border-radius: 0; /* Remove circular shape */
-    box-shadow: none; /* Remove shadow */
+    right: 20px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 #linkedin-logo {
-    width: auto; /* Maintain natural width */
-    height: 40px; /* Set a consistent height while preserving aspect ratio */
-    object-fit: contain; /* Ensure the image fits without distortion */
+    width: auto;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(82, 227, 255, 0.22));
 }
-
-/* Projects Section */
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout */
-    gap: 40px; /* Increase spacing between boxes */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     margin-top: 40px;
 }
 
@@ -195,15 +231,16 @@ a #main-header:hover {
     border-radius: 12px;
     margin: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    height: 600px; /* Increase box height */
+    border: 1px solid rgba(82, 227, 255, 0.18);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    height: 600px;
 }
 
 .project-card img {
     width: 100%;
-    height: 100%; /* Ensure the image fills the box */
-    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -212,21 +249,28 @@ a #main-header:hover {
     bottom: 0;
     width: 100%;
     height: 100%;
-
-    background: rgba(0,0,0,0.55);
+    background:
+        linear-gradient(180deg, rgba(4, 16, 24, 0.18), rgba(4, 16, 24, 0.86)),
+        radial-gradient(circle at center, rgba(82, 227, 255, 0.18), transparent 58%);
     color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
+.project-overlay h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    text-shadow: 0 0 16px rgba(82, 227, 255, 0.55);
+}
+
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+    border-color: rgba(42, 245, 194, 0.34);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35), 0 0 30px rgba(42, 245, 194, 0.12);
 }
 
 .project-card:hover .project-overlay {
@@ -246,7 +290,36 @@ a #main-header:hover {
 }
 
 .sliding-graphic:hover img {
-    transform: translateX(80px); /* Slide the graphic on hover */
+    transform: translateX(80px);
+}
+
+main,
+section {
+    color: var(--text-main);
+}
+
+section p,
+main p,
+main span {
+    color: var(--text-soft);
+}
+
+#about-me-section,
+section h2 {
+    color: var(--accent-cyan);
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 40px 0 20px;
+}
+
+section p {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 @media (max-width: 768px) {
@@ -254,12 +327,11 @@ a #main-header:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Add spacing between stacked cards */
+        gap: 20px;
     }
 
     .project-card {
-        width: 90%; /* Adjust width for smaller screens */
-        height: auto; /* Allow height to adjust dynamically */
+        width: 90%;
+        height: auto;
     }
 }
-
